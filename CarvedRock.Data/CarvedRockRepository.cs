@@ -1,4 +1,5 @@
 ﻿using CarvedRock.Data.Entities;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
@@ -19,8 +20,27 @@ namespace CarvedRock.Data
         }
         public async Task<List<Product>> GetProductsAsync(string category)
         {
-            _logger.LogInformation("Getting Products in repository for category : {categgory}", category);
-            return await _ctx.Products.Where(p => p.Category == category || category == "all").ToListAsync();
+            _logger.LogInformation("Getting products in repository for {category}", category);
+            if (category == "clothing")
+            {
+                var ex = new ApplicationException("Database error occurred!!");
+                ex.Data.Add("Category", category);
+                throw ex;
+            }
+            if (category == "equip")
+            {
+                throw new SqliteException("Simulated fatal database error occurred!", 551);
+            }
+            try
+            {
+                return await _ctx.Products.Where(p => p.Category == category || category == "all").ToListAsync();
+            }
+            catch(Exception ex)
+            {
+                var newEx = new ApplicationException("Something bed happend i database", ex);
+                newEx.Data.Add("Category", category);
+                throw newEx;
+            }
         }
 
         public async Task<Product?> GetProductByIdAsync(int id)

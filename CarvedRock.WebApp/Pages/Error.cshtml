@@ -1,0 +1,38 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<p>
+    <strong>TraceId :</strong> <code>@Model.TraceId</code>
+</p>
+
+<p>
+    <strong>CurrentActivityId :</strong> <code>@Model.CurrentActivity?.Id</code>
+</p>
+<p>
+    <strong>CurrentSpanId :</strong> <code>@Model.CurrentActivity?.SpanId</code>
+</p>
+<p>
+    <strong>Parent :</strong> <code>@Model.CurrentActivity?.Parent</code>
+</p>
+<p>
+    <strong>ParentId :</strong> <code>@Model.CurrentActivity?.ParentId</code>
+</p>
+<p>
+    <strong>Kind :</strong> <code>@Model.CurrentActivity?.Kind</code>
+</p>
+<p>
+    <strong>Root Id :</strong> <code>@Model.CurrentActivity?.RootId</code>
+</p>

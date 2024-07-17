@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.Domain", "CarvedRock.Domain\CarvedRock.Domain.csproj", "{B54BCC73-BA40-4F46-B3CE-5FB25E8C6AA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.Domain", "CarvedRock.Domain\CarvedRock.Domain.csproj", "{B54BCC73-BA40-4F46-B3CE-5FB25E8C6AA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.Api", "CarvedRock.Api\CarvedRock.Api.csproj", "{AE4FF0F2-6570-4792-AB10-C92FDF929574}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.Api", "CarvedRock.Api\CarvedRock.Api.csproj", "{AE4FF0F2-6570-4792-AB10-C92FDF929574}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.Data", "CarvedRock.Data\CarvedRock.Data.csproj", "{856EE17C-FB7A-40B1-A869-A35089209E4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarvedRock.Data", "CarvedRock.Data\CarvedRock.Data.csproj", "{856EE17C-FB7A-40B1-A869-A35089209E4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarvedRock.WebApp", "CarvedRock.WebApp\CarvedRock.WebApp.csproj", "{58A177FB-5F61-48F8-9F64-4534A6204228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{856EE17C-FB7A-40B1-A869-A35089209E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{856EE17C-FB7A-40B1-A869-A35089209E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{856EE17C-FB7A-40B1-A869-A35089209E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A177FB-5F61-48F8-9F64-4534A6204228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A177FB-5F61-48F8-9F64-4534A6204228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A177FB-5F61-48F8-9F64-4534A6204228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A177FB-5F61-48F8-9F64-4534A6204228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
